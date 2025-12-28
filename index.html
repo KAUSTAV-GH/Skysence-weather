@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SkySense — Weather Dashboard</title>
+
+    
+    <link rel="stylesheet" href="web.css" />
+</head>
+<body>
+
+
+<div class="stars-bg">
+  <div class="stars stars-1"></div>
+  <div class="stars stars-2"></div>
+  <div class="shooting-star"></div>
+</div>
+
+
+
+<div class="app">
+
+    
+    <aside class="sidebar">
+        <div class="logo">⚡</div>
+        <div class="nav-icon active">🏠</div>
+        <div class="nav-icon">🗺️</div>
+        <div class="nav-icon">📍</div>
+        <div class="nav-icon">💼</div>
+        <div class="nav-icon settings">⚙️</div>
+    </aside>
+
+    
+    <main class="main">
+
+        
+        <section class="left">
+
+            
+            <div class="card search-bar">
+                <button class="location-btn">
+                    📍 <span id="locName">Kolkata</span>
+                </button>
+
+                <input
+                    type="text"
+                    id="searchCity"
+                    class="search-input"
+                    placeholder="Search for places..."
+                />
+
+                <div class="temp-toggle">
+                    <button id="btnF" class="temp-btn">°F</button>
+                    <button id="btnC" class="temp-btn active">°C</button>
+                </div>
+            </div>
+
+            
+            <div class="card current">
+                <div class="day-date">
+                    <h1 id="dayName">Saturday</h1>
+                    <p id="fullDate">Dec 27, 2025</p>
+                </div>
+
+                <div class="weather-display">
+                    <div>
+                        <div class="temp" id="mainTemp">--°</div>
+                        <div class="range" id="hiLo">H: --  L: --</div>
+                    </div>
+
+                    <div class="icon-large" id="bigIcon">⛅</div>
+                </div>
+
+                <div class="status">
+                    <div class="badge">
+                        ☁️ <span id="condition">--</span>
+                    </div>
+                    <div class="feels">
+                        Feels like <span id="feelsVal">--</span>°
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="hourly-head">
+                    <h3>Forecast</h3>
+                    <div class="toggle-btns">
+                        <button class="toggle-btn active" id="btnToday">Today</button>
+                        <button class="toggle-btn" id="btnWeek">Week</button>
+
+                    </div>
+                </div>
+
+                <div class="hourly-scroll" id="hourlyData">
+                   
+                </div>
+            </div>
+
+           
+            <div class="card tomorrow">
+                <div>
+                    <h4>Tomorrow</h4>
+                    <p class="sub">Forecast</p>
+                    <div class="tomorrow-temp" id="tmrTemp">--°</div>
+                </div>
+
+                <div class="tomorrow-icon" id="tmrIcon">🌤️</div>
+
+                <div class="day-len">
+                    <h4>Length of day</h4>
+                    <div class="day-len-time" id="dayLenVal">--</div>
+                </div>
+            </div>
+
+        </section>
+
+        
+        <section class="right">
+
+            
+            <div class="user-bar">
+                <div class="user">
+                    <div class="avatar">👤</div>
+                    <span>User</span>
+                    ▼
+                </div>
+            </div>
+
+            <h2 class="title">Today Highlights</h2>
+
+            <div class="grid">
+
+                
+                <div class="highlight">
+                    <h4>💨 WIND</h4>
+                    <div class="compass">
+                        <span class="dir n">N</span>
+                        <span class="dir e">E</span>
+                        <span class="dir s">S</span>
+                        <span class="dir w">W</span>
+                        <div id="windDir" style="font-size:2em">↑</div>
+                    </div>
+                    <div style="text-align:center">
+                        <div class="big-val" id="windVal">--</div>
+                        <div class="sub">km/h</div>
+                    </div>
+                </div>
+
+                
+                <div class="highlight">
+                    <h4>🌧️ RAINFALL</h4>
+                    <div class="big-val" id="rainVal">-- mm</div>
+                    <div class="sub">Last hour</div>
+                </div>
+
+                
+                <div class="highlight">
+                    <h4>🌡️ PRESSURE</h4>
+                    <div class="big-val" id="pressVal">--</div>
+                    <div class="sub">hPa</div>
+                </div>
+
+             
+                <div class="highlight">
+                    <h4>👁️ VISIBILITY</h4>
+                    <div class="big-val" id="visVal">-- km</div>
+                    <div class="sub">Average</div>
+                </div>
+
+                
+                <div class="highlight full">
+                    <h4>🍃 AIR QUALITY</h4>
+                    <div class="big-val" id="aqiVal">--</div>
+                    <div class="aqi-bar">
+                        <div class="aqi-mark"></div>
+                    </div>
+                </div>
+
+               
+                <div class="highlight full">
+                    <h4>🌡️ Temperature Map</h4>
+                    <div class="map-box">
+                        <div class="map-pin">
+                            <span id="mapTempVal">--°</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<footer class="footer-fixed">
+  © 2025 · Data provided by OpenWeatherMap · Developed by Kaustav
+</footer>
+
+
+<script src="web.js"></script>
+</body>
+</html>
