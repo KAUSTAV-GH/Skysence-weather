@@ -28,9 +28,9 @@ https://kaustav-gh.github.io/Skysence-weather/
 • Clean, modern, competition-level polish<br><br>
 
 <b>🛠️ Tech Stack</b><br>
-• HTML5<br>
-• CSS3<br>
-• JavaScript (ES6)<br>
+• HTML<br>
+• CSS<br>
+• JavaScript<br>
 • OpenWeatherMap API<br><br>
 
 <b>🚀 Deployment</b><br>
